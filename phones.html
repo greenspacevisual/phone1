@@ -1,41 +1,17 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Найди свой идеальный телефон</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="header">
-        <h1>Найди свой идеальный телефон!</h1>
-        <p>Быстрый подбор смартфонов по вашим параметрам</p>
+<div class="Card">
+  <div class="CardInner">
+    <label>Найди свой идеальный телефон</label>
+    <div class="container">
+      <div class="Icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </div>
+      <div class="InputContainer">
+        <input placeholder="Поиск"/>
+      </div>
     </div>
-
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Например: „iPhone 14“, „камера 50 МП“, „до 30 000 руб.“">
-        <button id="searchBtn">Найти</button>
-    </div>
-
-    <img src="https://avatars.mds.yandex.net/i?id=3dbeba372bf9df28506f3cf8dfd6483c_l-16497014-images-thumbs&n=13" alt="Кот LegCat" class="cat-image" width="200">
-
-    <div class="filters" id="filtersContainer">
-        <div class="filter-btn" data-filter="camera">Камера</div>
-        <div class="filter-btn" data-filter="battery">Батарея</div>
-        <div class="filter-btn" data-filter="os">ОС</div>
-    </div>
-
-    <div class="phone-cards" id="phoneCards">
-        <!-- Карточки телефонов будут загружаться динамически -->
-    </div>
-
-    <div class="nav-bar">
-        <div class="nav-item" onclick="openSection('stores')">Магазины</div>
-        <div class="nav-item" onclick="openSection('budget')">Бюджет</div>
-        <div class="nav-item" onclick="openSection('support')">Помощь</div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+  </div>
+</div>
 
