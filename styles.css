@@ -9,6 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #222;
     color: #fff;
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
 }
 
 /* Шапка (фиксирована сверху) */
@@ -17,9 +18,10 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    padding: 20px 0;
+    padding: 15px 0;
     background: linear-gradient(135deg, #333, #444);
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .header h1 {
@@ -29,10 +31,10 @@ body {
     color: #fff;
 }
 
-/* Поле поиска */
+/* Поле поиска (фиксировано под шапкой) */
 .search-container {
     position: fixed;
-    top: 60px; /* отступ от шапки */
+    top: 60px; /* Высота шапки */
     left: 0;
     right: 0;
     padding: 10px;
@@ -65,10 +67,25 @@ body {
 
 /* Контейнер для телефонов (прокручиваемый) */
 .phones-container {
-    overflow-y: auto;
-    height: calc(100vh - 120px); /* высота = весь экран минус шапка (60px) и панель иконок (60px) */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+    overflow-x: hidden; /* Запрещаем горизонтальную прокрутку */
+    height: calc(100vh - 120px); /* Высота = весь экран минус шапка (60px) и панель иконок (60px) */
     padding: 16px;
-    margin-top: 80px; /* отступ от поля поиска */
+    margin-top: 80px; /* Отступ от поля поиска */
+    width: 100%;
+}
+
+.phones-container::-webkit-scrollbar {
+    width: 8px; /* Ширина скроллбара */
+}
+
+.phones-container::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.phones-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
 }
 
 .phone-card {
@@ -79,6 +96,7 @@ body {
     padding: 16px;
     text-align: center;
     transition: transform 0.3s ease;
+    width: 100%;
 }
 
 .phone-card:hover {
@@ -95,34 +113,9 @@ body {
     margin: 12px 0 8px;
     color: #fff;
     font-size: 16px;
-    font-weight: 600;
-}
+    font-weight:
 
-.phone-card p {
-    color: #bbb;
-    font-size: 13px;
-    margin: 4px 0;
-}
 
-.price {
-    color: #ff5722;
-    font-size: 18px;
-    font-weight: bold;
-    display: block;
-    margin-top: 12px;
-}
-
-/* Нижняя панель навигации (фиксирована снизу) */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background-color: #333;
-    display: flex;
-    justify-content: space-around;
-    align
 
 
 
