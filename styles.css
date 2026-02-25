@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif; /* изменён шрифт */
     background-color: #222;
     color: #fff;
     overflow-x: hidden; /* Убираем горизонтальную прокрутку */
@@ -21,7 +21,7 @@ body {
     padding: 15px 0;
     background: linear-gradient(135deg, #333, #444);
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .header h1 {
@@ -56,11 +56,6 @@ body {
     transition: all 0.3s ease;
 }
 
-.search-input:focus {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: #007bff;
-}
-
 .search-button {
     padding: 14px 24px;
     background-color: #007bff;
@@ -73,10 +68,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.search-button:hover {
-    background-color: #0056b3;
-}
-
 /* Контейнер для телефонов (прокручиваемый) */
 .phones-container {
     overflow-y: auto;
@@ -87,30 +78,11 @@ body {
     scroll-behavior: smooth; /* Плавная прокрутка */
 }
 
-/* Стили для скроллбара (современные браузеры) */
-.phones-container::-webkit-scrollbar {
-    width: 10px;
-}
-
-.phones-container::-webkit-scrollbar-track {
-    background: #333;
-    border-radius: 5px;
-}
-
-.phones-container::-webkit-scrollbar-thumb {
-    background: #555;
-    border-radius: 5px;
-    border: 2px solid #333;
-}
-
-.phones-container::-webkit-scrollbar-thumb:hover {
-    background: #666;
-}
-
-/* Для Firefox */
-.phones-container {
-    scrollbar-width: thin;
-    scrollbar-color: #555 #333;
+/* Грид для карточек телефонов (2 на ряд) */
+.phone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 20px; /* Отступы между карточками */
 }
 
 /* Карточки телефонов */
@@ -118,11 +90,9 @@ body {
     background-color: #333;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 16px;
     padding: 16px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
 }
 
 .phone-card:hover {
@@ -140,20 +110,20 @@ body {
 .phone-card h3 {
     margin: 12px 0 8px;
     color: #fff;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px; /* увеличен размер шрифта */
+    font-weight: 700; /* сделан жирным */
 }
 
 .phone-card p {
     color: #bbb;
-    font-size: 13px;
+    font-size: 14px;
     margin: 4px 0;
 }
 
 .price {
     color: #ff5722;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700; /* сделан жирным */
     display: block;
     margin-top: 12px;
 }
@@ -163,7 +133,28 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    right:
+    right: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around; /* равномерное распределение */
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.nav-item {
+    font-size: 18px; /* увеличен размер шрифта */
+    font-weight: 700; /* сделан жирным */
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: rgba(2
+
 
 
 
