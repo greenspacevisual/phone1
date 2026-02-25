@@ -21,7 +21,7 @@ body {
     padding: 15px 0;
     background: linear-gradient(135deg, #333, #444);
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .header h1 {
@@ -37,7 +37,7 @@ body {
     top: 60px; /* Высота шапки */
     left: 0;
     right: 0;
-    padding: 10px;
+    padding: 10px 16px;
     background-color: #333;
     z-index: 1000;
     display: flex;
@@ -53,6 +53,12 @@ body {
     color: #ddd;
     font-size: 16px;
     outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #007bff;
 }
 
 .search-button {
@@ -63,31 +69,51 @@ body {
     border-radius: 0 12px 12px 0;
     font-size: 16px;
     cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
 }
 
 /* Контейнер для телефонов (прокручиваемый) */
 .phones-container {
-    overflow-y: auto; /* Включаем вертикальную прокрутку */
-    overflow-x: hidden; /* Запрещаем горизонтальную прокрутку */
-    height: calc(100vh - 120px); /* Высота = весь экран минус шапка (60px) и панель иконок (60px) */
-    padding: 16px;
-    margin-top: 80px; /* Отступ от поля поиска */
+    overflow-y: auto;
+    height: calc(100vh - 120px); /* Высота = весь экран минус шапка (60px) и панель (60px) */
+    padding: 20px;
+    margin-top: 90px; /* Увеличенный отступ от поля поиска — решает проблему с перекрытием */
     width: 100%;
+    scroll-behavior: smooth; /* Плавная прокрутка */
 }
 
+/* Стили для скроллбара (современные браузеры) */
 .phones-container::-webkit-scrollbar {
-    width: 8px; /* Ширина скроллбара */
+    width: 10px;
 }
 
 .phones-container::-webkit-scrollbar-track {
     background: #333;
+    border-radius: 5px;
 }
 
 .phones-container::-webkit-scrollbar-thumb {
     background: #555;
-    border-radius: 4px;
+    border-radius: 5px;
+    border: 2px solid #333;
 }
 
+.phones-container::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* Для Firefox */
+.phones-container {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #333;
+}
+
+/* Карточки телефонов */
 .phone-card {
     background-color: #333;
     border-radius: 12px;
@@ -95,25 +121,50 @@ body {
     margin-bottom: 16px;
     padding: 16px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
 }
 
 .phone-card:hover {
     transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .phone-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .phone-card h3 {
     margin: 12px 0 8px;
     color: #fff;
     font-size: 16px;
-    font
+    font-weight: 600;
+}
+
+.phone-card p {
+    color: #bbb;
+    font-size: 13px;
+    margin: 4px 0;
+}
+
+.price {
+    color: #ff5722;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+}
+
+/* Нижняя панель навигации */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right:
+
 
 
 
