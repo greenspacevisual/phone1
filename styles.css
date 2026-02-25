@@ -122,12 +122,13 @@ body {
 
 /* Иконки (можно заменить на SVG или Font Awesome) */
 .home-icon {
-    background: url('img/home-icon.svg') no-repeat center;
+    background: url('https://i.pinimg.com/originals/95/79/05/957905e8d8c6074be7dc8378ddad4a69.png') no-repeat center;
 }
 .search-icon {
-    background: url('img/search-icon.svg') no-repeat center;
+    background: url('https://i.pinimg.com/originals/fe/e8/7d/fee87d01d52072f0589c4de685215fdb.png') no-repeat center;
 }
 .tops-icon {
-    background: url('img/tops-icon.svg') no-repeat center;
+    background: url('https://avatars.mds.yandex.net/i?id=eb10fd8e1c92141b3a5b1cefdb442464_l-4407838-images-thumbs&n=13') no-repeat center;
 }
+
 
