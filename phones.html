@@ -18,9 +18,9 @@
         <button class="search-button">Найти</button>
     </div>
 
-    <!-- Карточки с флагманами -->
-    <div class="flagships-container">
-        <div class="card">
+    <!-- Контейнер для телефонов (с прокруткой) -->
+    <div class="phones-container">
+        <div class="phone-card">
             <img src="img/phone1.jpg" alt="Телефон 1">
             <h3>Модель 1</h3>
             <p>Камера 64 МП</p>
@@ -28,7 +28,7 @@
             <p>8 ГБ ОЗУ</p>
             <span class="price">59 990 ₽</span>
         </div>
-        <div class="card">
+        <div class="phone-card">
             <img src="img/phone2.jpg" alt="Телефон 2">
             <h3>Модель 2</h3>
             <p>Камера 50 МП</p>
@@ -36,7 +36,7 @@
             <p>6 ГБ ОЗУ</p>
             <span class="price">49 990 ₽</span>
         </div>
-        <div class="card">
+        <div class="phone-card">
             <img src="img/phone3.jpg" alt="Телефон 3">
             <h3>Модель 3</h3>
             <p>Камера 48 МП</p>
@@ -44,9 +44,10 @@
             <p>8 ГБ ОЗУ</p>
             <span class="price">54 990 ₽</span>
         </div>
+        <!-- Добавьте здесь другие карточки телефонов -->
     </div>
 
-    <!-- Нижняя панель навигации -->
+    <!-- Нижняя панель навигации (фиксированная) -->
     <nav class="bottom-nav">
         <a href="#" class="nav-item home active">
             <span class="icon home-icon">
@@ -59,15 +60,25 @@
         <a href="#" class="nav-item search">
             <span class="icon search-icon">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"/>
                 </svg>
             </span>
             <span class="label">Поиск</span>
         </a>
         <a href="#" class="nav-item tops">
             <span class="icon tops-icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                    <path d="M12 2L15 8h-6l3-6zm-4 8v8l-4 2v2h12v-2l-4-2V10H8z"/>
+                </svg>
+            </span>
+            <span class="label">Топы</span>
+        </a>
+    </nav>
+</body>
+</html>
+
+
 
 
 
