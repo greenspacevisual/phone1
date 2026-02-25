@@ -1,17 +1,67 @@
-<div class="Card">
-  <div class="CardInner">
-    <label>Найди свой идеальный телефон</label>
-    <div class="container">
-      <div class="Icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-      </div>
-      <div class="InputContainer">
-        <input placeholder="Поиск"/>
-      </div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Найди свой идеальный телефон с #FYPhone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <h1>Найди свой идеальный телефон с #FYPhone</h1>
+    </header>
+
+    <!-- Поле поиска -->
+    <div class="search-container">
+        <input type="text" placeholder="Поиск" class="search-input">
+        <button class="search-button">Найти</button>
     </div>
-  </div>
-</div>
+
+    <!-- Карточки с флагманами -->
+    <div class="flagships-container">
+        <div class="card">
+            <img src="img/phone1.jpg" alt="Телефон 1">
+            <h3>Модель 1</h3>
+            <p>Камера 64 МП</p>
+            <p>6.7" AMOLED</p>
+            <p>8 ГБ ОЗУ</p>
+            <span class="price">59 990 ₽</span>
+        </div>
+        <div class="card">
+            <img src="img/phone2.jpg" alt="Телефон 2">
+            <h3>Модель 2</h3>
+            <p>Камера 50 МП</p>
+            <p>6.5" OLED</p>
+            <p>6 ГБ ОЗУ</p>
+            <span class="price">49 990 ₽</span>
+        </div>
+        <div class="card">
+            <img src="img/phone3.jpg" alt="Телефон 3">
+            <h3>Модель 3</h3>
+            <p>Камера 48 МП</p>
+            <p>6.4" AMOLED</p>
+            <p>8 ГБ ОЗУ</p>
+            <span class="price">54 990 ₽</span>
+        </div>
+    </div>
+
+    <!-- Нижняя панель навигации -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item home">
+            <span class="icon home-icon"></span>
+            <span class="label">Главная</span>
+        </a>
+        <a href="#" class="nav-item search">
+            <span class="icon search-icon"></span>
+            <span class="label">Поиск</span>
+        </a>
+        <a href="#" class="nav-item tops">
+            <span class="icon tops-icon"></span>
+            <span class="label">Топы</span>
+        </a>
+    </nav>
+</body>
+</html>
+
 
