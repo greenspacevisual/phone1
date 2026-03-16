@@ -7,38 +7,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Шапка -->
-    <header class="header">
-        <h1>Найди свой идеальный телефон с #FYPhone</h1>
-    </header>
+    <!-- Контейнер для вкладок -->
+    <div class="tabs-container">
+        <!-- Главная -->
+        <div id="home" class="tab-pane active">
+            <header class="header">
+                <h1>Найди свой идеальный телефон с #FYPhone</h1>
+            </header>
 
-    <!-- Поле поиска -->
-    <div class="search-container">
-        <input type="text" placeholder="Поиск" class="search-input">
-        <button class="search-button">Найти</button>
-    </div>
+            <!-- Поле поиска -->
+            <div class="search-container">
+                <input type="text" placeholder="Поиск" class="search-input" id="searchInput">
+                <button class="search-button" id="searchBtn">Найти</button>
+                <!-- Блок для подсказок -->
+                <div id="suggestions-list" class="suggestions-container"></div>
+            </div>
 
-    <!-- Контейнер для телефонов (с прокруткой) -->
-    <div class="phones-container">
-        <div class="phone-grid">
-            <!-- Здесь будут карточки телефонов -->
+            <!-- Контейнер для телефонов -->
+            <div class="phones-container">
+                <div class="phone-grid" id="phoneCards">
+                    <!-- Карточки телефонов будут добавлены через JS -->
+                </div>
+                
+                <!-- Сообщение под блоком поиска -->
+                <div class="search-message">
+                    Начните поиск — найдите свой идеальный телефон!
+                </div>
+            </div>
         </div>
-        
-        <!-- Перемещённая надпись под блоком поиска -->
-        <div class="search-message">
-            Начните поиск — найдите свой идеальный телефон!
+
+        <!-- Вкладка Топы -->
+        <div id="top" class="tab-pane">
+            <header class="header">
+                <h1>Топ телефонов по мнению экспертов</h1>
+            </header>
+            <div class="phones-container">
+                <div class="phone-grid" id="topPhonesGrid">
+            <!-- Карточки топа будут добавлены через JS -->
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Нижняя панель навигации (фиксированная) -->
     <nav class="bottom-nav">
-        <a href="#" class="nav-item left">Главная</a>
-        <a href="#" class="nav-item center">Поиск</a>
-        <a href="#" class="nav-item right">Топы</a>
+        <a href="#" class="nav-item left active" data-tab="home">Главная</a>
+        <a href="#" class="nav-item center" data-tab="search">Поиск</a>
+        <a href="#" class="nav-item right" data-tab="top">Топы</a>
     </nav>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
