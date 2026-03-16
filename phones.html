@@ -3,53 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Найди свой идеальный телефон с #FYPhone</title>
+    <title>Выбор телефона с #FVPhone</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Контейнер для вкладок -->
+    <header class="header">
+        <h1>Найди свой идеальный телефон с #FVPhone</h1>
+    </header>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Поиск" class="search-input">
+        <button id="searchBtn" class="search-button">Найти</button>
+    </div>
+
     <div class="tabs-container">
-        <!-- Главная -->
         <div id="home" class="tab-pane active">
-            <header class="header">
-                <h1>Найди свой идеальный телефон с #FYPhone</h1>
-            </header>
-
-            <!-- Поле поиска -->
-            <div class="search-container">
-                <input type="text" placeholder="Поиск" class="search-input" id="searchInput">
-                <button class="search-button" id="searchBtn">Найти</button>
-                <!-- Блок для подсказок -->
-                <div id="suggestions-list" class="suggestions-container"></div>
-            </div>
-
-            <!-- Контейнер для телефонов -->
-            <div class="phones-container">
-                <div class="phone-grid" id="phoneCards">
-                    <!-- Карточки телефонов будут добавлены через JS -->
-                </div>
-                
-                <!-- Сообщение под блоком поиска -->
-                <div class="search-message">
-                    Начните поиск — найдите свой идеальный телефон!
-                </div>
+            <div id="phoneCards" class="phones-container">
+                <!-- Здесь будут карточки телефонов -->
             </div>
         </div>
-
-        <!-- Вкладка Топы -->
+        <div id="search" class="tab-pane">
+            <p class="search-message">Используйте поиск сверху для нахождения телефона.</p>
+        </div>
         <div id="top" class="tab-pane">
-            <header class="header">
-                <h1>Топ телефонов по мнению экспертов</h1>
-            </header>
-            <div class="phones-container">
-                <div class="phone-grid" id="topPhonesGrid">
-            <!-- Карточки топа будут добавлены через JS -->
-                </div>
+            <div id="topPhonesGrid" class="phones-container">
+                <!-- Здесь будут карточки топовых телефонов -->
             </div>
         </div>
     </div>
 
-    <!-- Нижняя панель навигации (фиксированная) -->
     <nav class="bottom-nav">
         <a href="#" class="nav-item left active" data-tab="home">Главная</a>
         <a href="#" class="nav-item center" data-tab="search">Поиск</a>
