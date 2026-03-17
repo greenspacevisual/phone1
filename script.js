@@ -45,30 +45,18 @@ function showTab(tabId) {
         }
     });
 
-    // Автоматически фокусируем поиск на вкладке "Поиск"
-    if (tabId === 'search') {
-        setTimeout(() => {
-            document.getElementById('searchInput').focus();
-        }, 100);
-    }
-
     // Дополнительные действия при переключении
     if (tabId === 'home') {
-        renderPhones('phoneCards');
+        renderPhones();
     } else if (tabId === 'top') {
         renderTopPhones();
     }
 }
 
-// Отображение карточек телефонов
-function renderPhones(containerId) {
-    const container = document.getElementById(containerId);
+// Отображение карточек телефонов на главной вкладке
+function renderPhones() {
+    const container = document.getElementById('phoneCards');
     container.innerHTML = '';
-
-    if (filteredPhones.length === 0) {
-        container.innerHTML = '<p class="no-results">Ничего не найдено</p>';
-        return;
-    }
 
     filteredPhones.forEach(phone => {
         const card = document.createElement('div');
@@ -107,14 +95,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
     filteredPhones = phones.filter(phone =>
         phone.name.toLowerCase().includes(searchQuery)
     );
-
-    // Отображаем результаты в зависимости от активной вкладки
-    const activeTab = document.querySelector('.tab-pane.active').id;
-    if (activeTab === 'search') {
-        renderPhones('searchResults');
-    } else {
-        renderPhones('phoneCards');
-    }
+    renderPhones();
 });
 
 // Показ и фильтрация подсказок поиска
@@ -146,12 +127,36 @@ function showSuggestions() {
                 // Автоматически запускаем поиск по выбранной подсказке
                 filteredPhones = phones.filter(phone =>
                     phone.name.toLowerCase().includes(item.toLowerCase())
-        );
-        
-        // Отображаем в зависимости от активной вкладки
-        const activeTab = document.querySelector('.tab-pane.active').id;
-        if (activeTab === 'search') {
-            renderPhones('searchResults');
-        } else {
-            renderPhones('phoneCards');
-        }
+                );
+                renderPhones();
+            };
+            list.appendChild(div);
+        });
+        list.classList.add('visible');
+    } else {
+        list.classList.remove('visible');
+    }
+}
+
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    renderPhones(); // Загружаем карточки на главной
+
+    // Добавляем блок для подсказок в DOM
+    const suggestionsContainer = document.createElement('div');
+    suggestionsContainer.id = 'suggestions-list';
+    suggestionsContainer.className = 'suggestions-container';
+    document.querySelector('.search-container').appendChild(suggestionsContainer);
+
+    // Обработчики для навигации
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const tabId = this.getAttribute('data-tab');
+            showTab(tabId);
+        });
+    });
+
+    // Обработчик для подсказок
+    document.getElementById('searchInput').addEventListener('input', showSuggestions);
+});
