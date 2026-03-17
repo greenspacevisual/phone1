@@ -34,6 +34,11 @@ function showTab(tabId) {
         tab.classList.remove('active');
     });
 
+    // Очистка результатов поиска при уходе с вкладки «Поиск»
+    if (tabId !== 'search') {
+        document.getElementById('searchResults').innerHTML = '';
+    }
+
     // Показать выбранную вкладку
     document.getElementById(tabId).classList.add('active');
 
@@ -108,13 +113,9 @@ document.getElementById('searchBtn').addEventListener('click', () => {
         phone.name.toLowerCase().includes(searchQuery)
     );
 
-    // Отображаем результаты в зависимости от активной вкладки
-    const activeTab = document.querySelector('.tab-pane.active').id;
-    if (activeTab === 'search') {
-        renderPhones('searchResults');
-    } else {
-        renderPhones('phoneCards');
-    }
+    // Всегда переключаемся на вкладку «Поиск» и отображаем результаты там
+    showTab('search');
+    renderPhones('searchResults');
 });
 
 // Показ и фильтрация подсказок поиска
@@ -143,15 +144,41 @@ function showSuggestions() {
                 input.value = item;
                 list.innerHTML = '';
                 list.classList.remove('visible');
-                // Автоматически запускаем поиск по выбранной подсказке
+
+                // Автоматически фильтруем и переключаемся на вкладку «Поиск»
                 filteredPhones = phones.filter(phone =>
                     phone.name.toLowerCase().includes(item.toLowerCase())
-        );
-        
-        // Отображаем в зависимости от активной вкладки
-        const activeTab = document.querySelector('.tab-pane.active').id;
-        if (activeTab === 'search') {
-            renderPhones('searchResults');
-        } else {
-            renderPhones('phoneCards');
-        }
+                );
+                showTab('search');
+                renderPhones('searchResults');
+            };
+            list.appendChild(div);
+        });
+        list.classList.add('visible');
+    } else {
+        list.classList.remove('visible');
+    }
+}
+
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    renderPhones('phoneCards'); // Загружаем карточки на главной
+
+    // Добавляем блок для подсказок в DOM
+    const suggestionsContainer = document.createElement('div');
+    suggestionsContainer.id = 'suggestions-list';
+    suggestionsContainer.className = 'suggestions-container';
+    document.querySelector('.search-container').appendChild(suggestionsContainer);
+
+    // Обработчики для навигации
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const tabId = this.getAttribute('data-tab');
+            showTab(tabId);
+        });
+    });
+
+    // Обработчик для подсказок
+    document.getElementById('searchInput').addEventListener('input', showSuggestions);
+});
