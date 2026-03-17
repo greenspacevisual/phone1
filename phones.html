@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Выбор телефона с #FVPhone</title>
+    <title>Выбор телефона с #FYPhone</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
-        <h1>Найди свой идеальный телефон с #FVPhone</h1>
+        <h1>Найди свой идеальный телефон с #FYPhone</h1>
     </header>
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Поиск" class="search-input">
@@ -22,7 +22,9 @@
             </div>
         </div>
         <div id="search" class="tab-pane">
-            <p class="search-message">Используйте поиск сверху для нахождения телефона.</p>
+            <div id="searchResults" class="phones-container">
+                <!-- Результаты поиска будут здесь -->
+            </div>
         </div>
         <div id="top" class="tab-pane">
             <div id="topPhonesGrid" class="phones-container">
@@ -40,7 +42,6 @@
     <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
