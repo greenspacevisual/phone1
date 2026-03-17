@@ -1,3 +1,4 @@
+
 // Исходные данные о телефонах
 const phones = [
     { id: 1, name: "iPhone 14", price: 79990, camera: "12 МП", battery: "3279 мАч", os: "iOS" },
@@ -8,9 +9,9 @@ const phones = [
 
 // Данные для топа телефонов
 const topPhones = [
-    { name: "iPhone 15 Pro", specs: "6.1″ OLED, A17 Bionic, 48 МП камера, 120 Гц" },
-    { name: "Samsung Galaxy S24 Ultra", specs: "6.8″ Dynamic AMOLED, Snapdragon 8 Gen 3, 200 МП камера" },
-    { name: "Google Pixel 8", specs: "6.2″ OLED, Tensor G3, 50 МП камера, 90 Гц" }
+    { name: "iPhone 15 Pro", specs: "6.1″ OLED, A17 Bionic, 48 МП камера, 120 Гц" },
+    { name: "Samsung Galaxy S24 Ultra", specs: "6.8″ Dynamic AMOLED, Snapdragon 8 Gen 3, 200 МП камера" },
+    { name: "Google Pixel 8", specs: "6.2″ OLED, Tensor G3, 50 МП камера, 90 Гц" }
 ];
 
 // Подсказки для поиска
@@ -76,7 +77,7 @@ function renderPhones(containerId) {
         card.innerHTML = `
             <img src="https://via.placeholder.com/180x120?text=${phone.name}" alt="${phone.name}">
             <h3>${phone.name}</h3>
-            <p>От ${phone.price} ₽</p>
+            <p>От ${phone.price} ₽</p>
             <p>Камера: ${phone.camera}</p>
             <p>Батарея: ${phone.battery}</p>
             <p>ОС: ${phone.os}</p>
