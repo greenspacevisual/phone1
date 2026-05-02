@@ -26,13 +26,13 @@ body {
     display: inline-block; /* Делаем блочным элементом для центрирования */
     padding: 1rem; /* Внутренние отступы */
     position: relative;
-    left: 5%; /* Смещение вправо на 5% (настраивайте по желанию) */
+    left: 0%; /* Смещение вправо на 5% (настраивайте по желанию) */
 }
 
 /* Стили для слогана */
 .gradient-bg h1 {
     color: white; /* Белый цвет текста */
-    font-size: 2.5rem; /* Размер шрифта */
+    font-size: 2.1rem; /* Размер шрифта */
     margin: 0; /* Убираем отступы */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для контраста */
 }
@@ -88,7 +88,7 @@ body {
 .nav-item a {
     color: #ffc107; /* Яркий жёлтый цвет */
     text-decoration: none; /* Убираем подчёркивание */
-    font-family: 'Arial', sans-serif; /* Единый шрифт */
+    font-family: 'Impact', sans-serif; /* Единый шрифт */
     font-size: 16px; /* Размер шрифта */
     font-weight: 500; /* Средняя жирность */
     transition: color 0.3s; /* Плавный переход при наведении */
