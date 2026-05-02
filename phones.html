@@ -7,34 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">FYPhone</div>
+    <!-- Блок 1: Лозунг (верхний) -->
+    <header class="header">
         <h1>Найди свой идеальный телефон с #FYPhone</h1>
     </header>
 
-    <main>
+    <!-- Блок 2: Рабочая область (средний) -->
+    <main class="main">
         <form class="search-form">
             <input type="text" placeholder="Поиск телефона..." required>
             <button type="submit">Найти</button>
         </form>
+        
+        <!-- Здесь будут карточки телефонов (пока пусто) -->
+        <div class="phone-cards"></div>
     </main>
 
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Поиск</a></li>
-            <li><a href="#">Топы</a></li>
-        </ul>
-    </nav>
-
-    <aside class="social">
-        <a href="#"><img src="instagram.svg" alt="Instagram"></a>
-        <a href="#"><img src="telegram.svg" alt="Telegram"></a>
-        <a href="#"><img src="vk.svg" alt="VK"></a>
-    </aside>
-
-    <footer>
-        <p>© 2024 FYPhone. Все права защищены.</p>
+    <!-- Блок 3: Нижний блок с навигацией и соцсетями -->
+    <footer class="footer">
+        <nav class="nav-links">
+            <a href="#">Главная</a>
+            <a href="#">Топы</a>
+        </nav>
+        
+        <div class="social-links">
+            <a href="#"><img src="vk.png" alt="VK"></a>
+            <a href="#"><img src="telegram.png" alt="Telegram"></a>
+            <a href="#"><img src="tiktok.png" alt="TikTok"></a>
+        </div>
     </footer>
 </body>
 </html>
