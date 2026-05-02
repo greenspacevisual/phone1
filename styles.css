@@ -68,21 +68,18 @@ body {
     background-color: #5a68c2;
 }
 
-/* Фиксированный нижний блок навигации (Footer) — всегда внизу! */
+/* Нижний блок навигации (Footer) */
 .footer-nav {
-    position: fixed; /* Фиксируем блок */
-    bottom: 0; /* Приклеиваем к нижнему краю экрана */
-    width: 100%; /* На всю ширину экрана */
     background-color: #2c3e50; /* Тёмно-синий фон */
     padding: 15px 0; /* Отступы сверху/снизу */
     display: flex; /* Гибкая разметка */
     justify-content: space-around; /* Равномерное распределение элементов */
     align-items: center; /* Выравнивание по центру по вертикали */
-    border-radius: 0 0 8px 8px; /* Скругление только нижних углов */
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Тень сверху */
-    z-index: 1000; /* Убедимся, что блок поверх всего */
+    width: 90%; /* Ширина блока */
+    margin: 20px auto; /* Отступы и центрирование */
+    border-radius: 8px; /* Скруглённые уголки */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для объёма */
 }
-
 
 .nav-item {
     flex: 1; /* Каждый элемент занимает равную часть ширины */
@@ -101,10 +98,4 @@ body {
 .nav-item a:hover {
     color: #ffab00; /* Чуть более насыщенный жёлтый при наведении */
     text-decoration: underline; /* Подчёркивание при наведении */
-}
-
-/* Стили для иконок Font Awesome */
-i.fa {
-    margin-right: 5px;
-    font-size: 1.2em;
 }
