@@ -8,30 +8,33 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Логотип FYPhone">
-        </div>
+        <div class="logo">FYPhone</div>
         <h1>Найди свой идеальный телефон с #FYPhone</h1>
     </header>
 
     <main>
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Поиск телефона...">
-            <button id="search-btn">Найти</button>
-        </div>
+        <form class="search-form">
+            <input type="text" placeholder="Поиск телефона..." required>
+            <button type="submit">Найти</button>
+        </form>
     </main>
 
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Поиск</a></li>
+            <li><a href="#">Топы</a></li>
+        </ul>
+    </nav>
+
+    <aside class="social">
+        <a href="#"><img src="instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="telegram.svg" alt="Telegram"></a>
+        <a href="#"><img src="vk.svg" alt="VK"></a>
+    </aside>
+
     <footer>
-        <nav class="footer-nav">
-            <a href="#" class="nav-link">Главная</a>
-            <a href="#" class="nav-link">Поиск</a>
-            <a href="#" class="nav-link">Топы</a>
-        </nav>
-        <div class="social-links">
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="telegram.png" alt="Telegram"></a>
-            <a href="#"><img src="vk.png" alt="VK"></a>
-        </div>
+        <p>© 2024 FYPhone. Все права защищены.</p>
     </footer>
 </body>
 </html>
