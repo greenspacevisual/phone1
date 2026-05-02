@@ -7,29 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>FYPhone</h1>
-        <h2>Найди свой идеальный телефон с #FYPhone</h2>
+    <!-- Шапка с заголовком -->
+    <header class="header">
+        <h1>Найди свой идеальный телефон с #FYPhone</h1>
     </header>
 
-    <!-- Основной контент -->
-    <main>
-        <!-- Здесь может быть дополнительный контент -->
+    <!-- Основная часть с поиском -->
+    <main class="main">
+        <div class="search-container">
+            <input type="text" placeholder="Поиск телефона…" class="search-input">
+            <button class="search-button">Найти</button>
+        </div>
     </main>
 
-    <!-- Поле поиска (перемещено вниз) -->
-    <section class="search-section">
-        <input type="text" placeholder="Поиск телефона..." />
-        <button>Найти</button>
-    </section>
-
-    <!-- Блок "Мы в соцсетях" (вместо "Главная Поиск Топы") -->
-    <footer class="social-footer">
-        <h3>Мы в соцсетях</h3>
-        <div class="social-links">
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="telegram.png" alt="Telegram"></a>
-            <a href="#"><img src="vk.png" alt="VK"></a>
+    <!-- Нижний блок навигации -->
+    <footer class="bottom-nav">
+        <div class="nav-item">
+            <a href="/">Главная</a>
+        </div>
+        <div class="nav-item">
+            <a href="/tops">Топы</a>
+        </div>
+        <div class="nav-item social-link">
+            <a href="/social">Мы в соцсетях</a>
         </div>
     </footer>
 </body>
